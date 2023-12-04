@@ -1,0 +1,20 @@
+#data-wrapper{
+    display: flex;
+    gap:1rem;
+    flex-direction: column;
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    box-shadow: 0px -1px 23px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px -1px 23px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px -1px 23px 0px rgba(0,0,0,0.75);
+justify-content: center;
+align-items: center;
+}
+.card-text-part{
+    display: flex;
+    gap: 20px;
+}
