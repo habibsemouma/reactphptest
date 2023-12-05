@@ -32,7 +32,7 @@ function App() {
 
     return (
         <div>
-            <h1>Boy i hope this works</h1>
+            <h1>Big test</h1>
             <div id="data-wrapper">
                 {data.map((item) => (
                     <div class="card" key={item.id}>
