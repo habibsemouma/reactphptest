@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import axios from "axios";
 import "./styles/home.css";
@@ -11,13 +9,10 @@ function App() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                // Make a GET request using Axios
                 const response = await axios.get("http://localhost:8000/");
 
-                // The response data is already parsed as JSON, so you can directly use it
                 const result = response.data;
 
-                // Update the state with the fetched data
                 setData(result);
 
                 console.log(result);
@@ -26,7 +21,6 @@ function App() {
             }
         };
 
-        // Call the fetchData function
         fetchData();
     }, []);
 
@@ -38,7 +32,7 @@ function App() {
                     <div class="card" key={item.id}>
                         <img src={Monster}></img>
                         <div className="card-text-part">
-                            <p>Name: {item.name}</p>
+                            <p>Name: {item.name +' a'} </p>
                             <p>Age: {item.age}</p>
                         </div>
                     </div>
