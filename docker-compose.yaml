@@ -10,7 +10,7 @@ services:
       POSTGRES_DB: bistra_db
     networks:
       net:
-        ipv4_address: 193.168.1.40
+        ipv4_address: 193.168.1.10
       
   backend:
     build: 
@@ -18,14 +18,14 @@ services:
     container_name: backend
     networks:
       net:
-        ipv4_address: 193.168.1.40
+        ipv4_address: 193.168.1.20
   
   frontend:
     build:
       context: ./frontend
     networks:
       net:
-        ipv4_address: 193.168.1.40
+        ipv4_address: 193.168.1.30
 
   nginx:
       image: nginx:1.25
@@ -38,7 +38,7 @@ services:
         - ./nginx/runtime_logs:/var/log/nginx
       networks:
         net:
-          ipv4_address: 193.168.1.10
+          ipv4_address: 193.168.1.40
       depends_on:
         - frontend
         - backend
